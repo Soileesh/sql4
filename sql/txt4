@@ -1,0 +1,14 @@
+create table person(
+name1 nvarchar2 (15),
+surname1 nvarchar2(15),
+father_name nvarchar2(15),
+gender nchar(10)
+);
+insert into person
+values('Shafag','Talibova','Shamil','daughter');
+select * from person;
+
+select substr(name1,instr(name1,' ')) || ' ' || substr(surname1,instr(name1,' ')) || ' ' || substr(father_name,instr(father_name,' ')) as allinform
+from person;
+ 
+select replace('Talibova','alibo','-') as last_name from person;
